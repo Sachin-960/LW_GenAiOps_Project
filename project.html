@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Sachin Dayal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #202124;
+            color: #FFFFFF;
+            font-family: "Poppins", sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333333;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #F1C40F;
+            margin-left: 20px;
+        }
+
+        .navbar .nav-links a {
+            color: #ECF0F1;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #F1C40F;
+        }
+
+        .navbar .nav-links a.active {
+            color: #F1C40F;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            padding: 30px;
+            text-align: center;
+        }
+
+        /* Typing effect without blinking cursor */
+        .typing-effect {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 600%; /* Increased font size by 600% */
+            color: #F1C40F; /* Yellow color */
+            width: auto;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            margin-bottom: 20px;
+            animation: typing 4s steps(40) 1s forwards;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        .search-box {
+            margin-top: 20px;
+            margin-bottom: 30px;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px; /* Space between "Hello World!" and search bar */
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            outline: none;
+        }
+
+        .search-box button {
+            padding: 10px 20px;
+            margin-left: -50px;
+            background-color: #F1C40F;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 90%;
+            margin-top: 20px;
+        }
+
+        .button-container a {
+            text-decoration: none;
+        }
+
+        .button-container button {
+            padding: 15px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #333333;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            justify-content: center;
+            opacity: 0;
+            transform: translateX(-100%);
+            animation: slideIn 0.6s forwards;
+        }
+
+        @keyframes slideIn {
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .button-container button i {
+            font-size: 18px;
+        }
+
+        .button-container button:hover {
+            background-color: #F1C40F;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="title">Projects</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="aboutMe.html">About</a>
+            <a href="#" class="active">Projects</a>
+            <a href="https://www.linkedin.com/in/sachin-dayal/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Sachin-960" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+    <div class="content">
+        <!-- Typing effect for Hello World! -->
+        <div class="typing-effect">Hello World!</div>
+
+        <!-- Search Box -->
+        <div class="search-box">
+            <input type="text" placeholder="Search for a project...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+
+        <!-- Buttons for Projects -->
+        <div class="button-container">
+            <a href="http://127.0.0.1:5000/geo"><button><i class="fas fa-map-marker-alt"></i> Geo Coordinates</button></a>
+            <a href="http://127.0.0.1:5000/email"><button><i class="fas fa-envelope"></i> Send Emails</button></a>
+            <a href="http://127.0.0.1:5000/sendemails"><button><i class="fas fa-mail-bulk"></i> Send Bulk Emails</button></a>
+            <a href="http://127.0.0.1:5000/gsearch"><button><i class="fas fa-search"></i> Google Search</button></a>
+            <a href="http://127.0.0.1:5000/textToSpeech"><button><i class="fas fa-microphone"></i> Text To Speech</button></a>
+            <a href="http://127.0.0.1:5000/schedule_email"><button><i class="fas fa-clock"></i> Schedule Email</button></a>
+            <a href="http://127.0.0.1:5000/sms"><button><i class="fas fa-sms"></i> SMS</button></a>
+            <a href="http://127.0.0.1:5000/camfilter"><button><i class="fas fa-camera"></i> Camera Filter</button></a>
+            <a href="http://127.0.0.1:5000/docker"><button><i class="fas fa-docker"></i> Docker Management</button></a>
+            <a href="http://127.0.0.1:5000/weather"><button><i class="fas fa-cloud-sun"></i> Weather Forecast</button></a>
+            <a href="http://127.0.0.1:5000/news"><button><i class="fas fa-newspaper"></i> Latest News</button></a>
+            <a href="http://127.0.0.1:5000/currency"><button><i class="fas fa-coins"></i> Currency Converter</button></a>
+            <a href="http://127.0.0.1:5000/movies"><button><i class="fas fa-film"></i> Movie Finder</button></a>
+            <a href="http://127.0.0.1:5000/geolocation"><button><i class="fas fa-location-arrow"></i> Geo location</button></a>
+            <a href="http://127.0.0.1:5000/camglasses"><button><i class="fas fa-sunglasses"></i> Open Camera with Sunglasses</button></a>
+            <a href="http://127.0.0.1:5000/s3"><button><i class="fab fa-aws"></i> Upload on S3</button></a>
+            <a href="http://127.0.0.1:5000/ml"><button><i class="fas fa-brain"></i> Check ML Accuracy</button></a>
+            <a href="http://127.0.0.1:5000/create_instance"><button><i class="fab fa-aws"></i> Launch EC2 Instance</button></a>
+            <a href="http://127.0.0.1:5000/terminal"><button><i class="fas fa-terminal"></i> Command Line Interface</button></a>
+        </div>
+    </div>
+</body>
+</html>
